@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>💰 Participate in the Lottery 💰</title>
+    </head>
+    <body>
+        <h1>💰 Participate in the Lottery 💰</h1>
+        <input type="number" id="number"><button onclick="guess()">Guess!</button>
+        <p id="output"></p>
+        <script>
+            function guess() {
+                var number = document.getElementById("number").value;
+                function createrandom(max) {
+  return Math.floor(Math.random() * max) + 1;
+}
+var randomnumber = createrandom(10);
+if (number == randomnumber) {
+    document.getElementById("output").innerHTML = "💰 Congratulations! You have won the Lottery! 💰";
+            } else if (number != randomnumber){
+                document.getElementById("output").innerHTML = "😢 Sorry, you have not won the Lottery. The correct number was " + randomnumber + ". 😢";
+            } else {
+                alert("Please enter a guess.");
+            }
+        }
+        </script>
+    </body>
+</html>
